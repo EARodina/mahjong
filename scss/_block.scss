@@ -30,6 +30,7 @@
 }
 .hidden {
   opacity: 0;
+  transition: 0.3s linear;
 }
 .visible {
   opacity: 1;
