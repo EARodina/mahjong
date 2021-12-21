@@ -1,0 +1,231 @@
+.video {
+  padding: 50px 0 110px;
+  &-heading {
+    margin-bottom: 64px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.5;
+    color: $color-black;
+  }
+  &-box {
+    position: relative;
+    width: 857px;
+    height: 507px;
+    -webkit-filter: drop-shadow(0px 0px 10px #452c1f);
+    filter: drop-shadow(0px 0px 10px #452c1f);
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    img {
+      width: 734px;
+      height: 414px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url(/images/video/baloon.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 167px;
+      height: 291px;
+      top: 25px;
+      left: -100%;
+      -webkit-filter: drop-shadow(0px 4px 16px rgba(69, 44, 31, 0.64));
+      filter: drop-shadow(0px 4px 16px rgba(69, 44, 31, 0.64));
+      transition: 0.8s linear;
+      z-index: 3;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: url(/images/video/cats.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 185px;
+      height: 243px;
+      right: -100%;
+      bottom: -25px;
+      transition: 0.8s linear;
+      z-index: 2;
+    }
+    &.active {
+      &:before {
+        left: -125px;
+      }
+      &:after {
+        right: -135px;
+      }
+    }
+    &.swim {
+      &:before {
+        -webkit-animation: swim 4s linear infinite;
+        animation: swim 4s linear infinite;
+      }
+      &:after {
+        -webkit-animation: swim-2 6s linear infinite;
+        animation: swim-2 6s linear infinite;
+      }
+    }
+  }
+}
+@-webkit-keyframes swim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes swim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes swim-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes swim-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1200px) {
+  .video {
+    &-box {
+      width: 800px;
+      height: 483px;
+      img {
+        width: 680px;
+        height: 380px;
+      }
+      &:before {
+        width: 115px;
+        height: 200px;
+      }
+      &:after {
+        width: 150px;
+        height: 197px;
+      }
+      &.active {
+        &:before {
+          left: -70px;
+        }
+        &:after {
+          right: -60px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .video {
+    padding: 35px 0 100px;
+    &-heading {
+      margin-bottom: 32px;
+      font-size: 20px;
+    }
+    &-box {
+      width: 511px;
+      height: 308px;
+      img {
+        width: 439px;
+        height: 248px;
+      }
+      &:before {
+        width: 102px;
+        height: 177px;
+        top: 30px;
+      }
+      &:after {
+        width: 114px;
+        height: 149px;
+      }
+      &.active {
+        &:before {
+          left: -80px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .video {
+    padding: 25px 0 80px;
+    &-heading {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    &-box {
+      width: 250px;
+      height: 150px;
+      img {
+        width: 215px;
+        height: 120px;
+      }
+      &:before {
+        width: 50px;
+        height: 88px;
+      }
+      &:after {
+        width: 55px;
+        height: 73px;
+      }
+      &.active {
+        &:before {
+          left: -32px;
+        }
+        &:after {
+          right: -25px;
+        }
+      }
+    }
+  }
+  @-webkit-keyframes swim {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes swim {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
