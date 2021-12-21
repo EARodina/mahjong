@@ -26,7 +26,7 @@
     &:before {
       content: "";
       position: absolute;
-      background-image: url(/images/video/baloon.png);
+      background-image: url(../images/video/baloon.png);
       background-repeat: no-repeat;
       background-size: contain;
       width: 167px;
@@ -41,7 +41,7 @@
     &:after {
       content: "";
       position: absolute;
-      background-image: url(/images/video/cats.png);
+      background-image: url(../images/video/cats.png);
       background-repeat: no-repeat;
       background-size: contain;
       width: 185px;
